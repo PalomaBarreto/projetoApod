@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APOD 🌟</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="./script.js"></script>
+  
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200&family=Lily+Script+One&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  
+  <header>
+    <p>Astronomy Picture of the Day</p>
+  </header>
+  
+  <main id="box">
+    
+    
+    <form id="form">
+      
+      <label for="date">Escolha uma data para ver uma imagem das estrelas:</label>
+      <input type="date" name="date" id="data">
+      <button type="submit" id="buscar">Buscar imagem!</button>
+      
+    </form>
+    
+    <div id="infoResultado">
+      
+      <h2 id="titulo"></h2>
+      <p id="texto"></p>
+      
+    </div>
+    
+    <div id="resultado">
+      <div id="foto"></div>
+      <!-- <iframe id="video"></iframe> -->
+    </div>
+    
+  </main>
+  
+</body>
+</html>
