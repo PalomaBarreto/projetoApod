@@ -8,7 +8,7 @@
   
   <link rel="stylesheet" href="style.css">
   
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
   
   <script
   src="https://code.jquery.com/jquery-3.6.0.js"
@@ -26,7 +26,7 @@
 <body>
   
   <header>
-    <p>Astronomy Picture of the Day</p>
+    <h1>Astronomy Picture of the Day</h1>
   </header>
   
   <main id="box">
@@ -34,9 +34,9 @@
     
     <form id="form">
       
-      <label for="date">Escolha uma data para ver uma imagem das estrelas:</label>
+      <label for="date">Escolha uma data para ver estrelas:</label>
       <input type="date" name="date" id="data">
-      <button type="submit" id="buscar">Buscar imagem!</button>
+      <button type="submit" id="buscar">Buscar estrelas!</button>
       
     </form>
     
@@ -47,12 +47,12 @@
       
     </div>
     
-    <div id="resultado">
-      <div id="foto"></div>
-      <!-- <iframe id="video"></iframe> -->
-    </div>
+    <div id="resultado"></div>
     
   </main>
   
+  <footer>
+    <p>Todos os Direitos Reservados</p>
+  </footer>
 </body>
 </html>

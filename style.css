@@ -15,16 +15,16 @@ body
   align-items: center;
 }
 
-header>p
+h1
 {
   font-family: 'Lily Script One', cursive;
-  font-size: 40px;
+  font-size: 45px;
   color: bisque;
   text-align: center;
   margin: 10px;
 }
 
-header>p:hover
+h1:hover
 {
   transform: scale(1.025);
   transition: 0.5s;
@@ -32,13 +32,16 @@ header>p:hover
 
 #box
 {
-  background-color: rgba(0, 0, 0, 0.685);
-  color: bisque;
+  background-color: bisque;
+  color: black;
   font-weight: bold;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
   width: 1200px;
-  height: 500px;
+  height: 900px;
+  border-radius: 10px;
+  box-shadow: bisque  6px 6px 6px 6px;
+  
 }
 
 #form
@@ -47,7 +50,7 @@ header>p:hover
   justify-content: space-evenly;
   align-items: center;
   margin-top: 45px;
-  width: 1100px;
+  width: 1200px;
   
 }
 
@@ -61,19 +64,45 @@ header>p:hover
 
 #buscar
 {
-  background-color: bisque;
+  background-color: black;
   border-radius: 10px;
-  border-color: bisque;
+  border-color: black;
+  color: bisque;
   cursor: pointer;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
   font-weight: bold;
   padding: 5px;
-  
 }
 
 #buscar:hover
 {
   transform: scale(0.9);
   transition: 0.6s;
+}
+
+#infoResultado
+{
+  text-align: center;
+  margin: 20px 30px;
+}
+
+#resultado
+{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+iframe
+{
+  width: 600px;
+  height: 400px;
+}
+
+footer
+{
+  margin-top: 30px;
 }
