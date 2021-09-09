@@ -1,45 +1,48 @@
-const botao = $('#buscar')
-const titulo = $('#titulo')
-const explicacao = $('#texto')
-const img = $('#resultado')
-let obj
+const bttn = $('#buscar')
+const ttl = $('#titulo')
+const hj = $('#diaAtual')
+const exp = $('#texto')
+const img = $('#midia')
 
-botao.on('click', function (e)
+pedidoApi()
+
+bttn.on('click', function (e)
 {
   e.preventDefault()
   console.log('funcionou');
-  pedido()
+  pedidoApi()
 })
 
-function pedido(data)
+async function pedidoApi(data)
 {
-  $(`#data`).val()
-  
-  $.ajax
-  ({url: `https://api.nasa.gov/planetary/apod?api_key=hdMOlndVmBUifRwy4vXW97lzCjGOLBYEs8qNr59T&date=` +  $(`#data`).val(),
+  let key = 'hdMOlndVmBUifRwy4vXW97lzCjGOLBYEs8qNr59T'
+  var obj = await $.ajax
+  ({url: `https://api.nasa.gov/planetary/apod?api_key=${key}&date=${$('#inputData').val()}`,
   
   success: function(result)
   {
-    console.log(result);
     obj = result
-    titulo.html(`${obj.title}`)
-    explicacao.html(`${obj.explanation}`)
-    if (obj.media_type != "video")
+    console.log(obj);
+    ttl.html(`${obj.title}`)
+    exp.html(`${obj.explanation}`)
+    
+    if (obj.media_type != "video") 
     {
       img.html(`
-      <img width = '500' heigth = '500' id="foto" src="${obj.url}" alt=""></img>
+      <figure>
+      <img id="foto" src="${obj.url}">
+      <figcaption> ${obj.date}</figcaption>
+      </figure>
       `)
-             
-    }
-
-    else 
+    } 
+    
+    else if (obj.media_type === "video")
     {
-      img.html(`
+      img.html
+      (`
       <iframe id="video" src="${obj.url}"></iframe>
       `)
-    
     }
-    
-  }})
-
+  }
+})
 }

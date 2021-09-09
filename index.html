@@ -31,28 +31,32 @@
   
   <main id="box">
     
+    <section>
+      <form>
+        
+        <label for="date">Escolha uma data para ver maravilhas do universo:</label>
+        <input type="date" name="date" id="inputData">
+        <button type="submit" id="buscar">Buscar estrelas!</button>
+        
+      </form>
+      
+      <div id="infoResultado">
+        
+        <h2 id="titulo"></h2>
+        <p id="diaAtual"></p>
+        <p id="texto"></p>
+        
+      </div>
+      
+    </section>
     
-    <form id="form">
-      
-      <label for="date">Escolha uma data para ver estrelas:</label>
-      <input type="date" name="date" id="data">
-      <button type="submit" id="buscar">Buscar estrelas!</button>
-      
-    </form>
-    
-    <div id="infoResultado">
-      
-      <h2 id="titulo"></h2>
-      <p id="texto"></p>
-      
-    </div>
-    
-    <div id="resultado"></div>
+    <div id="midia"></div>
     
   </main>
   
   <footer>
-    <p>Todos os Direitos Reservados</p>
+    <p>&copy; Todos os direitos reservados. Página desenvolvida para fins didáticos.</p>
+    <a href="https://github.com/PalomaBarreto">Paloma Carvalho</a>
   </footer>
 </body>
 </html>
